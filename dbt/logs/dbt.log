@@ -1,0 +1,259 @@
+==================== 2026-11-20T08:55:38.189131Z | 01a1f82b-1fca-7a51-bb53-60ba881e2fd5 ====================
+08:55:38.189436 [info ]: Installing dbt project and profile setup
+08:55:38.194519 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+08:55:38.194647 [info ]: Success Project created successfully!
+08:55:38.194672 [info ]: Info Project name: jaffle_shop
+08:55:38.194681 [info ]: Info Project directory: jaffle_shop
+08:56:08.931796 [error]: [IoError (dbt1001)]: Failed to get profile selection: IO error: read interrupted
+08:56:08.965792 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [30.8s]
+==================== 2026-11-20T08:56:11.526850Z | 01a1f82b-a205-77a1-b811-c670c7e0163c ====================
+08:56:11.526944 [info ]: Installing dbt project and profile setup
+08:56:11.527042 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_1' instead
+08:56:11.531765 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+08:56:11.531849 [info ]: Success Project created successfully!
+08:56:11.531877 [info ]: Info Project name: jaffle_shop_1
+08:56:11.531935 [info ]: Info Project directory: jaffle_shop_1
+08:56:14.809147 [info ]: Info Setting up your profile...
+08:56:14.809893 [info ]: Loading ~/.dbt/profiles.yml
+08:56:14.811355 [info ]: Info Creating new profile...
+09:18:45.749644 [info ]: Success Profile written to /Users/raja/.dbt/profiles.yml
+09:18:45.772911 [info ]: Validating profile inputs, adapters, and connection
+
+09:18:45.775901 [info ]: dbt 2.0.9
+09:18:45.785418 [info ]: Started loading project
+09:18:45.813166 [info ]: Loading ~/.dbt/profiles.yml
+09:18:45.825697 [info ]: Finished loading project [  0.04s]
+09:18:45.831620 [info ]: Started debugging
+09:18:45.832719 [info ]: Debugging profile: dev
+09:18:45.832740 [info ]: Debugging dbt version: 2.0.9
+09:18:45.832779 [info ]: Debugging platform: macos aarch64 (unix)
+09:18:45.833141 [info ]: Debugging adapter type: databricks (remote)
+09:18:45.854821 [info ]: Debugging dependencies:
+  git: OK
+09:18:45.857508 [info ]: Debugging connection:
+  "schema": "gold",
+  "host": "https://dbc-a6d413ca-868d.cloud.databricks.com/",
+  "http_path": "/sql/1.0/warehouses/0d067163ef85a86c"
+09:18:45.864438 [debug]: Databricks driver resolved: databricks 0.21.0.dev+dbt0.21.13
+09:18:46.745492 [info ]: Debugging connection test: ERROR
+09:18:46.746406 [info ]: Finished debugging [  0.91s]
+09:18:46.747897 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `databricks` adapter.
+The following error was returned:
+
+failed to ping database: databricks: request error: error connecting: host=dbc-a6d413ca-868d.cloud.databricks.com/ port=443, httpPath=/sql/1.0/warehouses/0d067163ef85a86c: databricks: request error: open session request error: Post "https://dbc-a6d413ca-868d.cloud.databricks.com/:443/sql/1.0/warehouses/0d067163ef85a86c": request error after 1 attempt(s): unexpected HTTP status 404 Not Found
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+09:18:46.766684 [info ]: New version available 2.0.12 (run `dbt system update`)
+09:18:47.071642 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [22m 36s]
+==================== 2026-11-20T09:19:02.742840Z | 01a1f840-8e45-7880-ab4b-6eedc394ab17 ====================
+09:19:02.746440 [info ]: Installing dbt project and profile setup
+09:19:02.749013 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_2' instead
+09:19:02.754940 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:19:02.755734 [info ]: Success Project created successfully!
+09:19:02.755836 [info ]: Info Project name: jaffle_shop_2
+09:19:02.755907 [info ]: Info Project directory: jaffle_shop_2
+09:19:06.126883 [info ]: Info Setting up your profile...
+09:19:06.130430 [info ]: Loading ~/.dbt/profiles.yml
+09:19:06.139251 [info ]: Info Creating new profile...
+09:20:15.831923 [info ]: Success Profile written to /Users/raja/.dbt/profiles.yml
+09:20:15.832972 [info ]: Validating profile inputs, adapters, and connection
+
+09:20:15.834084 [info ]: dbt 2.0.9
+09:20:15.837626 [info ]: Started loading project
+09:20:15.860861 [info ]: Loading ~/.dbt/profiles.yml
+09:20:15.872946 [info ]: Finished loading project [  0.04s]
+09:20:15.875447 [info ]: Started debugging
+09:20:15.876279 [info ]: Debugging profile: dev
+09:20:15.876300 [info ]: Debugging dbt version: 2.0.9
+09:20:15.876441 [info ]: Debugging platform: macos aarch64 (unix)
+09:20:15.876620 [info ]: Debugging adapter type: databricks (remote)
+09:20:15.891991 [info ]: Debugging dependencies:
+  git: OK
+09:20:15.894468 [info ]: Debugging connection:
+  "schema": "gold",
+  "host": "dbc-a6d413ca-868d.cloud.databricks.com",
+  "http_path": "/sql/1.0/warehouses/0d067163ef85a86c"
+09:20:15.902593 [debug]: Databricks driver resolved: databricks 0.21.0.dev+dbt0.21.13
+09:20:21.144995 [debug]: borrow_tlocal_connection() took 5.244987s
+09:20:21.151719 [debug]: create_debug_span(...).entered() took 658.75µs
+09:20:21.482647 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 330.782792ms
+09:20:21.482730 [debug]: reader.schema() took 750ns
+09:20:21.486143 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 334.387167ms
+09:20:21.488583 [debug]: concat_batches + normalize_result_column_names took 2.397084ms
+09:20:21.489152 [debug]: record_current_span_status_from_attrs took 540.667µs
+09:20:21.489359 [debug]: Query executed on node unknown:
+select 1 as id
+09:20:21.489605 [debug]: drop(query_span_guard) (span exit/export) took 439.083µs
+09:20:21.494118 [debug]: adapter.execute() (full call, incl. adbc_execute_with_options) took 349.064709ms
+09:20:21.494637 [info ]: Debugging connection test: OK (5.6s)
+09:20:21.496357 [info ]: Debugged All checks passed!
+09:20:21.497164 [info ]: Finished debugging [  5.62s]
+09:20:21.500262 [info ]: New version available 2.0.12 (run `dbt system update`)
+09:20:21.742905 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' successfully for target 'dev' [1m 19s]
+==================== 2026-11-20T09:20:34.446494Z | 01a1f841-f47a-7351-b288-8e0b9281ce32 ====================
+09:20:38.453781 [info ]: 
+==================== Execution Summary =====================
+Finished 'system' successfully [4.0s]
+==================== 2026-11-20T09:43:31.105401Z | 01a1f856-f620-74f2-ba53-e34af1a5caaf ====================
+09:43:31.105588 [info ]: Installing dbt project and profile setup
+09:43:31.116605 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:43:31.117518 [info ]: Success Project created successfully!
+09:43:31.117561 [info ]: Info Project name: jaffle_shop
+09:43:31.117580 [info ]: Info Project directory: jaffle_shop
+09:44:54.289672 [error]: [IoError (dbt1001)]: Failed to get selection: IO error: read interrupted
+09:44:54.337534 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [1m 23s]
+==================== 2026-11-20T09:45:34.991149Z | 01a1f858-da0d-7621-a01a-534010f4654d ====================
+09:45:34.991268 [info ]: Installing dbt project and profile setup
+09:45:34.999610 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:45:34.999718 [info ]: Success Project created successfully!
+09:45:34.999754 [info ]: Info Project name: retail_data_platform
+09:45:34.999772 [info ]: Info Project directory: retail_data_platform
+09:45:42.179150 [info ]: Info Setting up your profile...
+09:45:42.179691 [info ]: Loading ~/.dbt/profiles.yml
+09:45:42.180405 [info ]: Profile 'retail_data_platform' already exists. You can choose how to proceed.
+09:45:49.436761 [info ]: Info Creating new profile...
+09:46:38.816054 [error]: [IoError (dbt1001)]: Profile setup cancelled
+09:46:38.868690 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [1m 4s]
+==================== 2026-11-20T09:46:42.004284Z | 01a1f859-dfd3-7a03-8b0a-2420d3ae98cc ====================
+09:46:42.004383 [info ]: Installing dbt project and profile setup
+09:46:42.004465 [info ]: Warning Directory 'retail_data_platform' already exists, using 'retail_data_platform_1' instead
+09:46:42.009744 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:46:42.009791 [info ]: Success Project created successfully!
+09:46:42.009804 [info ]: Info Project name: retail_data_platform_1
+09:46:42.009814 [info ]: Info Project directory: retail_data_platform_1
+09:46:47.506404 [info ]: Info Using existing profile 'retail_data_platform'
+09:46:47.507027 [info ]: Success Set profile 'retail_data_platform' in dbt_project.yml
+09:46:47.507079 [info ]: Validating profile inputs, adapters, and connection
+
+09:46:47.507111 [info ]: dbt 2.0.12
+09:46:47.507297 [info ]: Started loading project
+09:46:47.508781 [info ]: Loading ~/.dbt/profiles.yml
+09:46:47.509719 [info ]: Finished loading project [  0.00s]
+09:46:47.509824 [info ]: Started debugging
+09:46:47.509874 [info ]: Debugging profile: dev
+09:46:47.509903 [info ]: Debugging dbt version: 2.0.12
+09:46:47.509927 [info ]: Debugging platform: macos aarch64 (unix)
+09:46:47.509956 [info ]: Debugging adapter type: databricks (remote)
+09:46:47.526810 [info ]: Debugging dependencies:
+  git: OK
+09:46:47.527589 [info ]: Debugging connection:
+  "schema": "gold",
+  "host": "https://dbc-a6d413ca-868d.cloud.databricks.com/",
+  "http_path": "/sql/1.0/warehouses/0d067163ef85a86c"
+09:46:47.532393 [debug]: Databricks driver resolved: databricks 0.21.0.dev+dbt0.21.15
+09:46:48.217305 [info ]: Debugging connection test: ERROR
+09:46:48.217500 [info ]: Finished debugging [  0.71s]
+09:46:48.217663 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `databricks` adapter.
+The following error was returned:
+
+failed to ping database: databricks: request error: error connecting: host=dbc-a6d413ca-868d.cloud.databricks.com/ port=443, httpPath=/sql/1.0/warehouses/0d067163ef85a86c: databricks: request error: open session request error: Post "https://dbc-a6d413ca-868d.cloud.databricks.com/:443/sql/1.0/warehouses/0d067163ef85a86c": request error after 1 attempt(s): unexpected HTTP status 404 Not Found
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+09:46:48.260939 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [6.3s]
+==================== 2026-11-20T09:47:13.977081Z | 01a1f85a-5cb8-7f51-a0be-296d9b95cef1 ====================
+09:47:13.977183 [info ]: Installing dbt project and profile setup
+09:47:13.977277 [info ]: Warning Directory 'retail_data_platform' already exists, using 'retail_data_platform_2' instead
+09:47:13.982412 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:47:13.982453 [info ]: Success Project created successfully!
+09:47:13.982470 [info ]: Info Project name: retail_data_platform_2
+09:47:13.982481 [info ]: Info Project directory: retail_data_platform_2
+09:47:17.046531 [info ]: Info Setting up your profile...
+09:47:17.047204 [info ]: Loading ~/.dbt/profiles.yml
+09:47:17.048126 [info ]: Info Creating new profile...
+09:47:53.315115 [info ]: Success Profile written to /Users/raja/.dbt/profiles.yml
+09:47:53.315250 [info ]: Validating profile inputs, adapters, and connection
+
+09:47:53.315275 [info ]: dbt 2.0.12
+09:47:53.315427 [info ]: Started loading project
+09:47:53.316658 [info ]: Loading ~/.dbt/profiles.yml
+09:47:53.317466 [info ]: Finished loading project [  0.00s]
+09:47:53.317545 [info ]: Started debugging
+09:47:53.317580 [info ]: Debugging profile: dev
+09:47:53.317601 [info ]: Debugging dbt version: 2.0.12
+09:47:53.317615 [info ]: Debugging platform: macos aarch64 (unix)
+09:47:53.317634 [info ]: Debugging adapter type: databricks (remote)
+09:47:53.330200 [info ]: Debugging dependencies:
+  git: OK
+09:47:53.330280 [info ]: Debugging connection:
+  "schema": "gold",
+  "host": "dbc-a6d413ca-868d.cloud.databricks.com",
+  "http_path": "/sql/1.0/warehouses/0d067163ef85a86c"
+09:47:53.330524 [debug]: Databricks driver resolved: databricks 0.21.0.dev+dbt0.21.15
+09:47:59.361855 [debug]: borrow_tlocal_connection() took 6.031380458s
+09:47:59.365682 [debug]: create_debug_span(...).entered() took 735.167µs
+09:47:59.779691 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 413.479042ms
+09:47:59.779755 [debug]: reader.schema() took 416ns
+09:47:59.785841 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 420.128417ms
+09:47:59.786163 [debug]: concat_batches + normalize_result_column_names took 285µs
+09:47:59.786202 [debug]: record_current_span_status_from_attrs took 21.459µs
+09:47:59.786392 [debug]: Query executed on node unknown:
+select 1 as id
+09:47:59.786443 [debug]: drop(query_span_guard) (span exit/export) took 223.584µs
+09:47:59.789248 [debug]: adapter.execute() (full call, incl. adbc_execute_with_options) took 427.361875ms
+09:47:59.789324 [info ]: Debugging connection test: OK (6.5s)
+09:47:59.789595 [info ]: Debugged All checks passed!
+09:47:59.789691 [info ]: Finished debugging [  6.47s]
+09:47:59.839811 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' successfully for target 'dev' [45.9s]
+==================== 2026-11-20T09:51:07.803109Z | 01a1f85d-ee1a-7470-808a-8bf020ccab16 ====================
+09:51:07.803212 [info ]: Installing dbt project and profile setup
+09:51:07.812056 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+09:51:07.812349 [info ]: Success Project created successfully!
+09:51:07.812435 [info ]: Info Project name: retail_data_platform
+09:51:07.812462 [info ]: Info Project directory: retail_data_platform
+09:51:13.924011 [info ]: Info Setting up your profile...
+09:51:13.924271 [info ]: Loading ~/.dbt/profiles.yml
+09:51:13.924800 [info ]: Profile 'retail_data_platform' already exists. You can choose how to proceed.
+09:51:20.846167 [info ]: Info Creating new profile...
+09:52:16.418559 [info ]: Info Backup created at /Users/raja/.dbt/profiles.yml.bkp
+09:52:16.419995 [info ]: Success Profile written to /Users/raja/.dbt/profiles.yml
+09:52:16.420175 [info ]: Validating profile inputs, adapters, and connection
+
+09:52:16.420226 [info ]: dbt 2.0.12
+09:52:16.420515 [info ]: Started loading project
+09:52:16.423161 [info ]: Loading ~/.dbt/profiles.yml
+09:52:16.424734 [info ]: Finished loading project [  0.00s]
+09:52:16.424924 [info ]: Started debugging
+09:52:16.425437 [info ]: Debugging profile: dev
+09:52:16.425486 [info ]: Debugging dbt version: 2.0.12
+09:52:16.425515 [info ]: Debugging platform: macos aarch64 (unix)
+09:52:16.425546 [info ]: Debugging adapter type: databricks (remote)
+09:52:16.457377 [info ]: Debugging dependencies:
+  git: OK
+09:52:16.457482 [info ]: Debugging connection:
+  "schema": "gold",
+  "host": "dbc-a6d413ca-868d.cloud.databricks.com",
+  "http_path": "/sql/1.0/warehouses/0d067163ef85a86c"
+09:52:16.457731 [debug]: Databricks driver resolved: databricks 0.21.0.dev+dbt0.21.15
+09:52:17.642870 [debug]: borrow_tlocal_connection() took 1.185176416s
+09:52:17.645480 [debug]: create_debug_span(...).entered() took 80.125µs
+09:52:17.886917 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 241.283375ms
+09:52:17.887001 [debug]: reader.schema() took 667ns
+09:52:17.891540 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 246.008042ms
+09:52:17.891638 [debug]: concat_batches + normalize_result_column_names took 59.25µs
+09:52:17.891678 [debug]: record_current_span_status_from_attrs took 27.375µs
+09:52:17.891701 [debug]: Query executed on node unknown:
+select 1 as id
+09:52:17.891746 [debug]: drop(query_span_guard) (span exit/export) took 58.792µs
+09:52:17.891975 [debug]: adapter.execute() (full call, incl. adbc_execute_with_options) took 249.035166ms
+09:52:17.892026 [info ]: Debugging connection test: OK (1.4s)
+09:52:17.892808 [info ]: Debugged All checks passed!
+09:52:17.892936 [info ]: Finished debugging [  1.47s]
+09:52:17.944193 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' successfully for target 'dev' [1m 10s]
